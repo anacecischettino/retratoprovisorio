@@ -288,7 +288,7 @@
   <aside class="sidebar">
 
     <div>
-      <div class="section-title">01 — imagem</div>
+      <div class="section-title">01 carregue sua imagem</div>
       <div class="drop-area" id="dropArea">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
         <p>Arraste uma foto aqui<br>ou clique para escolher</p>
@@ -298,7 +298,7 @@
     </div>
 
     <div>
-      <div class="section-title">02 — imagem</div>
+      <div class="section-title">02 Edição</div>
 
       <div class="ctrl">
         <label>Resolução (largura px) <span id="resVal">80</span></label>
@@ -319,10 +319,9 @@
     </div>
 
     <div>
-      <div class="section-title">03 — dither</div>
+      <div class="section-title">03 Tipo de efeito</div>
 
       <div class="ctrl">
-        <label>Algoritmo</label>
         <select id="ditherSelect">
           <option value="floyd">Floyd-Steinberg</option>
           <option value="atkinson">Atkinson</option>
@@ -338,7 +337,7 @@
     </div>
 
     <div style="margin-top:auto">
-      <div class="section-title">04 — exportar</div>
+      <div class="section-title">04 Exportar</div>
       <button class="dl-btn" id="dlBtn" disabled>↓ baixar PNG</button>
     </div>
 
@@ -551,7 +550,7 @@ function process() {
 
 dlBtn.addEventListener('click', () => {
   const a = document.createElement('a');
-  a.download = 'ditherlab_' + Date.now() + '.png';
+  a.download = 'retratoprovisorio_' + Date.now() + '.png';
   a.href = outCanvas.toDataURL('image/png');
   a.click();
 });
